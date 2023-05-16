@@ -1,0 +1,49 @@
+1.	What is a database?
+	A database is a collection of data that is organized in a structured manner so that it can be easily accessed, managed, and updated. It is used to store and retrieve information and is often used as a foundation for applications.
+
+246.	Explain database schemas?
+	There are several types of database schemas, including:
+1)	Star schema: The star schema is a type of database schema used in data warehousing. In this schema, a central fact table is connected to multiple dimension tables through foreign keys. The fact table contains the measures or metrics of interest, while the dimension tables contain attributes or characteristics of the measures.
+2)	Snowflake schema: The snowflake schema is also a type of database schema used in data warehousing. It is like the star schema, but with additional normalization of the dimension tables. This means that the dimension tables are broken down into multiple smaller tables, resulting in a more complex but normalized schema.
+3)	Fact constellation schema: The fact constellation schema is a type of database schema used in complex data warehousing scenarios. It consists of multiple fact tables that are connected to multiple dimension tables. This schema is used when there are multiple types of facts that need to be analyzed together.
+4)	Third normal form (3NF) schema: The 3NF schema is a type of database schema used in traditional relational databases. It is based on the principles of normalization and is designed to reduce data redundancy and improve data integrity. In this schema, data is organized into tables that are in 3NF, which means that there are no transitive dependencies.
+5)	Entity-relationship (ER) schema: The ER schema is a type of database schema used to design relational databases. It is used to model the entities, attributes, and relationships between them. This schema is used to represent real-world concepts and relationships in a database.
+
+Each of these database schemas has its own strengths and weaknesses, and the choice of schema depends on the specific requirements of the application or system.
+
+2.	Explain different types of databases?
+	There are several types of databases, each with its own strengths and weaknesses. Here are some common types of databases and their characteristics:
+1)	Relational database: A relational database stores data in tables that are related to each other through common fields. It is based on the relational model of data, which uses SQL (Structured Query Language) to manipulate the data. Relational databases are widely used and are suited for applications that require a high level of data integrity and consistency.
+2)	NoSQL database: A NoSQL (Not Only SQL) database is a non-relational database that stores data in a variety of formats, including key-value pairs, document-based structures, and graphs. NoSQL databases are designed to handle large volumes of unstructured or semi-structured data, and are often used for big data and real-time applications.
+3)	Object-oriented database: An object-oriented database stores data in objects, which are instances of classes that define the structure and behavior of the data. Object-oriented databases are well-suited for applications that require complex data structures and relationships, such as CAD/CAM systems and scientific research.
+4)	Graph database: A graph database stores data in nodes and edges, which represent entities and their relationships. Graph databases are used for applications that require complex relationships between entities, such as social networking and recommendation systems.
+5)	Columnar database: A columnar database stores data in columns rather than rows, which allows for faster querying and analysis of large datasets. Columnar databases are commonly used for data warehousing and business intelligence applications.
+6)	In-memory database: An in-memory database stores data in memory rather than on disk, which provides faster access and processing of data. In-memory databases are commonly used for real-time applications that require high-performance and low latency.
+
+Each type of database has its own strengths and weaknesses, and the choice of database depends on the requirements of the application and the data being stored.
+
+3.	Explain different types of relational dB commands.
+	There are several types of commands that can be used to manage a relational database, including:
+1)	Data Definition Language (DDL) commands: DDL commands are used to create, modify, and delete database objects such as tables, indexes, and views. Examples of DDL commands include CREATE, ALTER, and DROP.
+2)	Data Manipulation Language (DML) commands: DML commands are used to manipulate data in a database. Examples of DML commands include SELECT, INSERT, UPDATE, and DELETE.
+3)	Data Control Language (DCL) commands: DCL commands are used to control access to database objects and to enforce security. Examples of DCL commands include GRANT and REVOKE.
+4)	Transaction Control Language (TCL) commands: TCL commands are used to manage transactions in a database. Examples of TCL commands include COMMIT, ROLLBACK, and SAVEPOINT.
+
+Here are some examples of each type of command:
+1)	DDL commands:
+i.	CREATE TABLE Customers (ID INT PRIMARY KEY, Name VARCHAR(50), Age INT);
+ii.	ALTER TABLE Customers ADD COLUMN Email VARCHAR(50);
+iii.	DROP TABLE Customers;
+2)	DML commands:
+i.	SELECT * FROM Customers WHERE Age > 30;
+ii.	INSERT INTO Customers (ID, Name, Age) VALUES (1, 'John Smith', 35);
+iii.	UPDATE Customers SET Age = 40 WHERE Name = 'John Smith';
+iv.	DELETE FROM Customers WHERE Age < 18;
+3)	DCL commands:
+i.	GRANT SELECT ON Customers TO User1;
+ii.	REVOKE INSERT ON Customers FROM User2;
+4)	TCL commands:
+i.	BEGIN TRANSACTION;
+ii.	UPDATE Customers SET Age = 50 WHERE Name = 'John Smith';
+iii.	COMMIT;
+iv.	ROLLBACK;
